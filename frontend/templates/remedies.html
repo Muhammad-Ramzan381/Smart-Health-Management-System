@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Remedies - Smart Health Management System</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="/" class="logo">
+                <span class="logo-icon">🏥</span>
+                <span>HealthCare</span>
+            </a>
+            <button class="menu-toggle">☰</button>
+            <nav class="nav">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/remedies" class="nav-link active">Remedies</a>
+                <a href="/diet-plans" class="nav-link">Diet Plans</a>
+                <a href="/vitals" class="nav-link">Vitals</a>
+                <a href="/history" class="nav-link">History</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <h1 class="section-title">🌿 Home Remedies Library</h1>
+            <p style="color: var(--text-light); margin-bottom: 2rem;">
+                Browse our collection of natural home remedies for common health issues.
+            </p>
+
+            <!-- Search -->
+            <div class="card mb-4">
+                <div class="form-group" style="margin-bottom: 0;">
+                    <input
+                        type="text"
+                        id="remedy-search"
+                        class="form-input"
+                        placeholder="Search remedies by name or ingredient..."
+                    >
+                </div>
+            </div>
+
+            <!-- Remedies List -->
+            <div id="remedies-list">
+                <div class="loading">
+                    <div class="spinner"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Smart Health Management System</p>
+            <p class="disclaimer">
+                ⚠️ This system provides general health information only.
+                Always consult a healthcare professional for medical advice.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        const API_BASE = '/api';
+        let allRemedies = [];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadRemedies();
+            document.getElementById('remedy-search').addEventListener('input', filterRemedies);
+        });
+
+        async function loadRemedies() {
+            try {
+                const response = await fetch(`${API_BASE}/remedies`);
+                const data = await response.json();
+
+                if (data.success) {
+                    allRemedies = data.remedies;
+                    renderRemedies(allRemedies);
+                }
+            } catch (error) {
+                console.error('Error loading remedies:', error);
+                document.getElementById('remedies-list').innerHTML = `
+                    <div class="alert alert-danger">Failed to load remedies. Please refresh the page.</div>
+                `;
+            }
+        }
+
+        function filterRemedies(e) {
+            const query = e.target.value.toLowerCase();
+
+            if (!query) {
+                renderRemedies(allRemedies);
+                return;
+            }
+
+            const filtered = allRemedies.filter(remedy => {
+                const nameMatch = remedy.name.toLowerCase().includes(query);
+                const descMatch = remedy.description.toLowerCase().includes(query);
+                const ingredientMatch = remedy.ingredients.some(i => i.toLowerCase().includes(query));
+                const symptomMatch = remedy.symptoms.some(s => s.toLowerCase().includes(query));
+
+                return nameMatch || descMatch || ingredientMatch || symptomMatch;
+            });
+
+            renderRemedies(filtered);
+        }
+
+        function renderRemedies(remedies) {
+            const container = document.getElementById('remedies-list');
+
+            if (remedies.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-state-icon">🔍</div>
+                        <p>No remedies found matching your search.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = remedies.map((remedy, index) => `
+                <div class="recommendation-card remedy">
+                    <div class="recommendation-header">
+                        <h3 class="recommendation-title">🌿 ${remedy.name}</h3>
+                        <span class="effectiveness-badge">
+                            ⭐ ${remedy.effectiveness}/10
+                        </span>
+                    </div>
+                    <p class="recommendation-description">${remedy.description}</p>
+
+                    <div class="tags-container mb-2">
+                        ${remedy.symptoms.map(s => `<span class="tag tag-primary">${s}</span>`).join('')}
+                    </div>
+
+                    <button class="btn btn-sm btn-outline" onclick="toggleRemedyDetails('remedy-${index}')">
+                        View Details
+                    </button>
+
+                    <div id="remedy-${index}" class="recommendation-details">
+                        <div class="detail-section">
+                            <h4 class="detail-title">📝 Ingredients</h4>
+                            <ul class="detail-list">
+                                ${remedy.ingredients.map(ing => `<li>${ing}</li>`).join('')}
+                            </ul>
+                        </div>
+                        <div class="detail-section">
+                            <h4 class="detail-title">👨‍🍳 Preparation</h4>
+                            <p>${remedy.preparation}</p>
+                        </div>
+                        <div class="detail-section">
+                            <h4 class="detail-title">⏱️ Time to Effect</h4>
+                            <p>${remedy.time_to_effect}</p>
+                        </div>
+                        <div class="detail-section">
+                            <h4 class="detail-title">⚠️ Safety Notes</h4>
+                            <p>${remedy.safety_notes}</p>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function toggleRemedyDetails(id) {
+            const details = document.getElementById(id);
+            if (details) {
+                details.classList.toggle('show');
+            }
+        }
+    </script>
+</body>
+</html>

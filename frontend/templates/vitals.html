@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitals Monitoring - Smart Health Management System</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="/" class="logo">
+                <span class="logo-icon">🏥</span>
+                <span>HealthCare</span>
+            </a>
+            <button class="menu-toggle">☰</button>
+            <nav class="nav">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/remedies" class="nav-link">Remedies</a>
+                <a href="/diet-plans" class="nav-link">Diet Plans</a>
+                <a href="/vitals" class="nav-link active">Vitals</a>
+                <a href="/history" class="nav-link">History</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <h1 class="section-title">❤️ Heart Rate Monitor</h1>
+
+            <!-- Instructions -->
+            <div class="alert alert-info mb-4">
+                <strong>How to measure:</strong>
+                <ol style="margin-top: 0.5rem; padding-left: 1.5rem;">
+                    <li>Click "Start Measurement"</li>
+                    <li>Place your finger gently over the camera lens</li>
+                    <li>Cover the camera flash with your finger if available</li>
+                    <li>Hold still for 15 seconds</li>
+                </ol>
+            </div>
+
+            <div class="grid-2">
+                <!-- Measurement Card -->
+                <div class="card vitals-container">
+                    <div class="card-header">
+                        <h2 class="card-title">📱 Measure Heart Rate</h2>
+                    </div>
+                    <div class="card-body text-center">
+                        <!-- Video Preview -->
+                        <video id="video-preview" class="video-preview" autoplay playsinline muted></video>
+
+                        <!-- Heart Rate Display -->
+                        <div class="heart-rate-display">
+                            <span id="heart-rate-value">--</span>
+                            <span>BPM</span>
+                        </div>
+
+                        <!-- Progress Bar -->
+                        <div style="background: var(--border-color); border-radius: 9999px; height: 8px; margin: 1rem 0;">
+                            <div id="measurement-progress" style="background: var(--danger-color); height: 100%; border-radius: 9999px; width: 0%; transition: width 0.3s;"></div>
+                        </div>
+
+                        <!-- Status -->
+                        <p id="status-text" style="color: var(--text-light); margin: 1rem 0;">
+                            Ready to measure
+                        </p>
+
+                        <!-- Measure Button -->
+                        <button id="measure-btn" class="btn btn-primary btn-lg">
+                            ❤️ Start Measurement
+                        </button>
+
+                        <!-- Reference Info -->
+                        <div style="margin-top: 1.5rem; padding: 1rem; background: var(--bg-color); border-radius: var(--radius);">
+                            <h4 style="margin-bottom: 0.5rem;">Normal Heart Rate Ranges:</h4>
+                            <ul style="list-style: none; color: var(--text-light); font-size: 0.875rem;">
+                                <li>Adults: 60-100 BPM</li>
+                                <li>Athletes: 40-60 BPM</li>
+                                <li>Children: 70-100 BPM</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- History Card -->
+                <div class="card">
+                    <div class="card-header">
+                        <h2 class="card-title">📊 Measurement History</h2>
+                        <button class="btn btn-sm btn-outline" onclick="clearVitalsHistory()">
+                            Clear History
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <!-- Chart -->
+                        <div class="chart-container" style="height: 200px; margin-bottom: 1rem;">
+                            <canvas id="vitals-chart"></canvas>
+                        </div>
+
+                        <!-- History List -->
+                        <div id="vitals-history">
+                            <!-- Populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tips Section -->
+            <div class="card mt-4">
+                <div class="card-header">
+                    <h2 class="card-title">💡 Tips for Accurate Measurement</h2>
+                </div>
+                <div class="card-body">
+                    <div class="grid-3">
+                        <div>
+                            <h4>📍 Position</h4>
+                            <p style="color: var(--text-light);">Sit comfortably and rest your arm on a flat surface while measuring.</p>
+                        </div>
+                        <div>
+                            <h4>🤚 Finger Placement</h4>
+                            <p style="color: var(--text-light);">Use your index finger and apply gentle, consistent pressure.</p>
+                        </div>
+                        <div>
+                            <h4>⏱️ Timing</h4>
+                            <p style="color: var(--text-light);">Measure at the same time daily for consistent tracking.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Warning -->
+            <div class="alert alert-warning mt-4">
+                <strong>⚠️ Important:</strong> This measurement is for reference only and may not be as accurate as medical devices. For health concerns, please consult a healthcare professional.
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Smart Health Management System</p>
+            <p class="disclaimer">
+                ⚠️ This system provides general health information only.
+                Always consult a healthcare professional for medical advice.
+            </p>
+        </div>
+    </footer>
+
+    <script src="/static/js/vitals.js"></script>
+</body>
+</html>

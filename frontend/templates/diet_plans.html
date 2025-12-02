@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet Plans - Smart Health Management System</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="/" class="logo">
+                <span class="logo-icon">🏥</span>
+                <span>HealthCare</span>
+            </a>
+            <button class="menu-toggle">☰</button>
+            <nav class="nav">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/remedies" class="nav-link">Remedies</a>
+                <a href="/diet-plans" class="nav-link active">Diet Plans</a>
+                <a href="/vitals" class="nav-link">Vitals</a>
+                <a href="/history" class="nav-link">History</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <h1 class="section-title">🥗 Diet Plans Library</h1>
+            <p style="color: var(--text-light); margin-bottom: 2rem;">
+                Discover diet plans tailored to help manage various health conditions.
+            </p>
+
+            <!-- Search -->
+            <div class="card mb-4">
+                <div class="form-group" style="margin-bottom: 0;">
+                    <input
+                        type="text"
+                        id="diet-search"
+                        class="form-input"
+                        placeholder="Search diet plans by name, symptom, or food..."
+                    >
+                </div>
+            </div>
+
+            <!-- Diet Plans List -->
+            <div id="diet-plans-list">
+                <div class="loading">
+                    <div class="spinner"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Smart Health Management System</p>
+            <p class="disclaimer">
+                ⚠️ This system provides general health information only.
+                Always consult a healthcare professional for medical advice.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        const API_BASE = '/api';
+        let allDietPlans = [];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            loadDietPlans();
+            document.getElementById('diet-search').addEventListener('input', filterDietPlans);
+        });
+
+        async function loadDietPlans() {
+            try {
+                const response = await fetch(`${API_BASE}/diets`);
+                const data = await response.json();
+
+                if (data.success) {
+                    allDietPlans = data.diet_plans;
+                    renderDietPlans(allDietPlans);
+                }
+            } catch (error) {
+                console.error('Error loading diet plans:', error);
+                document.getElementById('diet-plans-list').innerHTML = `
+                    <div class="alert alert-danger">Failed to load diet plans. Please refresh the page.</div>
+                `;
+            }
+        }
+
+        function filterDietPlans(e) {
+            const query = e.target.value.toLowerCase();
+
+            if (!query) {
+                renderDietPlans(allDietPlans);
+                return;
+            }
+
+            const filtered = allDietPlans.filter(diet => {
+                const nameMatch = diet.name.toLowerCase().includes(query);
+                const descMatch = diet.description.toLowerCase().includes(query);
+                const symptomMatch = diet.symptoms.some(s => s.toLowerCase().includes(query));
+                const foodMatch = diet.foods_to_eat.some(f => f.toLowerCase().includes(query));
+
+                return nameMatch || descMatch || symptomMatch || foodMatch;
+            });
+
+            renderDietPlans(filtered);
+        }
+
+        function renderDietPlans(dietPlans) {
+            const container = document.getElementById('diet-plans-list');
+
+            if (dietPlans.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-state-icon">🔍</div>
+                        <p>No diet plans found matching your search.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = dietPlans.map((diet, index) => `
+                <div class="recommendation-card diet">
+                    <div class="recommendation-header">
+                        <h3 class="recommendation-title">🥗 ${diet.name}</h3>
+                        <span class="effectiveness-badge">
+                            ⭐ ${diet.effectiveness}/10
+                        </span>
+                    </div>
+                    <p class="recommendation-description">${diet.description}</p>
+
+                    <div class="tags-container mb-2">
+                        ${diet.symptoms.map(s => `<span class="tag tag-primary">${s}</span>`).join('')}
+                    </div>
+
+                    <button class="btn btn-sm btn-outline" onclick="toggleDietDetails('diet-${index}')">
+                        View Details
+                    </button>
+
+                    <div id="diet-${index}" class="recommendation-details">
+                        <div class="foods-grid">
+                            <div class="foods-eat">
+                                <h4 class="detail-title">✅ Foods to Eat</h4>
+                                <ul class="detail-list">
+                                    ${diet.foods_to_eat.map(food => `<li>${food}</li>`).join('')}
+                                </ul>
+                            </div>
+                            <div class="foods-avoid">
+                                <h4 class="detail-title">❌ Foods to Avoid</h4>
+                                <ul class="detail-list">
+                                    ${diet.foods_to_avoid.map(food => `<li>${food}</li>`).join('')}
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="detail-section mt-2">
+                            <h4 class="detail-title">🍽️ Meal Suggestions</h4>
+                            <ul class="detail-list">
+                                <li><strong>Breakfast:</strong> ${diet.meal_suggestions.breakfast}</li>
+                                <li><strong>Lunch:</strong> ${diet.meal_suggestions.lunch}</li>
+                                <li><strong>Dinner:</strong> ${diet.meal_suggestions.dinner}</li>
+                                <li><strong>Snacks:</strong> ${diet.meal_suggestions.snacks}</li>
+                            </ul>
+                        </div>
+                        <div class="detail-section">
+                            <h4 class="detail-title">⏱️ Recommended Duration</h4>
+                            <p>${diet.duration}</p>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function toggleDietDetails(id) {
+            const details = document.getElementById(id);
+            if (details) {
+                details.classList.toggle('show');
+            }
+        }
+    </script>
+</body>
+</html>

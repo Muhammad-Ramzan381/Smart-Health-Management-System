@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Health Management System</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="/" class="logo">
+                <span class="logo-icon">🏥</span>
+                <span>HealthCare</span>
+            </a>
+            <button class="menu-toggle">☰</button>
+            <nav class="nav">
+                <a href="/" class="nav-link active">Home</a>
+                <a href="/remedies" class="nav-link">Remedies</a>
+                <a href="/diet-plans" class="nav-link">Diet Plans</a>
+                <a href="/vitals" class="nav-link">Vitals</a>
+                <a href="/history" class="nav-link">History</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Smart Health Management System</h1>
+            <p>Get personalized diet plans and home remedies based on your symptoms. Your health, naturally managed.</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Symptom Input Section -->
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">🔍 Enter Your Symptoms</h2>
+                </div>
+                <div class="card-body">
+                    <!-- Symptom Input -->
+                    <div class="form-group">
+                        <label class="form-label">What symptoms are you experiencing?</label>
+                        <div class="autocomplete-container">
+                            <input
+                                type="text"
+                                id="symptom-input"
+                                class="form-input"
+                                placeholder="Type a symptom (e.g., headache, fever, cough...)"
+                                autocomplete="off"
+                            >
+                            <div id="autocomplete-list" class="autocomplete-list"></div>
+                        </div>
+                    </div>
+
+                    <!-- Selected Symptoms -->
+                    <div class="form-group">
+                        <label class="form-label">Selected Symptoms:</label>
+                        <div id="selected-symptoms" class="tags-container">
+                            <p class="text-center" style="color: var(--text-light);">No symptoms selected</p>
+                        </div>
+                    </div>
+
+                    <!-- Severity Slider -->
+                    <div class="form-group">
+                        <label class="form-label">Severity Level:</label>
+                        <input
+                            type="range"
+                            id="severity-slider"
+                            class="severity-slider"
+                            min="1"
+                            max="10"
+                            value="5"
+                        >
+                        <div class="severity-value" id="severity-value">5</div>
+                        <div class="text-center" style="color: var(--text-light); font-size: 0.875rem;">
+                            1 = Mild | 5 = Moderate | 10 = Severe
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="flex-center" style="gap: 1rem; margin-top: 1.5rem;">
+                        <button id="analyze-btn" class="btn btn-primary btn-lg" disabled>
+                            🔍 Analyze Symptoms
+                        </button>
+                        <button id="clear-btn" class="btn btn-outline">
+                            🗑️ Clear All
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results Section -->
+            <section id="results-section" class="recommendations-section hidden">
+                <!-- Home Remedies -->
+                <div class="mb-4">
+                    <h2 class="section-title">🌿 Recommended Home Remedies</h2>
+                    <div id="remedies-container">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Diet Plans -->
+                <div class="mb-4">
+                    <h2 class="section-title">🥗 Recommended Diet Plans</h2>
+                    <div id="diet-plans-container">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </div>
+
+                <!-- Related Symptoms -->
+                <div id="related-symptoms">
+                    <!-- Populated by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Quick Info Cards -->
+            <div class="grid-3 mt-4">
+                <div class="card text-center">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🌿</div>
+                    <h3>Natural Remedies</h3>
+                    <p style="color: var(--text-light);">Safe and effective home-based treatments using natural ingredients.</p>
+                </div>
+                <div class="card text-center">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🥗</div>
+                    <h3>Diet Plans</h3>
+                    <p style="color: var(--text-light);">Personalized nutrition advice to support your recovery.</p>
+                </div>
+                <div class="card text-center">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">❤️</div>
+                    <h3>Vitals Monitoring</h3>
+                    <p style="color: var(--text-light);">Track your heart rate using your smartphone camera.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Smart Health Management System</p>
+            <p>Data Structures Project - Group B</p>
+            <p class="disclaimer">
+                ⚠️ Disclaimer: This system provides general health information only.
+                Always consult a healthcare professional for medical advice.
+            </p>
+        </div>
+    </footer>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
