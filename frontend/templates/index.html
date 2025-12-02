@@ -15,12 +15,21 @@
                 <span>HealthCare</span>
             </a>
             <button class="menu-toggle">☰</button>
-            <nav class="nav">
+            <nav class="nav" id="main-nav">
                 <a href="/" class="nav-link active">Home</a>
                 <a href="/remedies" class="nav-link">Remedies</a>
                 <a href="/diet-plans" class="nav-link">Diet Plans</a>
                 <a href="/vitals" class="nav-link">Vitals</a>
                 <a href="/history" class="nav-link">History</a>
+                <span id="auth-links">
+                    <a href="/login" class="nav-link">Login</a>
+                    <a href="/register" class="nav-link btn btn-primary" style="padding: 0.5rem 1rem; margin-left: 0.5rem;">Sign Up</a>
+                </span>
+                <span id="user-links" style="display: none;">
+                    <a href="/reminders" class="nav-link">Reminders</a>
+                    <span id="user-greeting" class="nav-link" style="cursor: pointer;"></span>
+                    <a href="#" id="logout-btn" class="nav-link">Logout</a>
+                </span>
             </nav>
         </div>
     </header>
@@ -152,5 +161,42 @@
     </footer>
 
     <script src="/static/js/app.js"></script>
+    <script>
+        // Check authentication status and update nav
+        async function checkAuthStatus() {
+            try {
+                const response = await fetch('/api/auth/me', { credentials: 'include' });
+                const data = await response.json();
+
+                const authLinks = document.getElementById('auth-links');
+                const userLinks = document.getElementById('user-links');
+                const userGreeting = document.getElementById('user-greeting');
+
+                if (data.authenticated) {
+                    authLinks.style.display = 'none';
+                    userLinks.style.display = 'inline';
+                    userGreeting.textContent = 'Hi, ' + (data.user.first_name || data.user.username);
+                } else {
+                    authLinks.style.display = 'inline';
+                    userLinks.style.display = 'none';
+                }
+            } catch (error) {
+                console.log('Auth check failed');
+            }
+        }
+
+        // Logout handler
+        document.getElementById('logout-btn').addEventListener('click', async function(e) {
+            e.preventDefault();
+            try {
+                await fetch('/api/auth/logout', { method: 'POST', credentials: 'include' });
+                window.location.reload();
+            } catch (error) {
+                console.error('Logout failed');
+            }
+        });
+
+        checkAuthStatus();
+    </script>
 </body>
 </html>

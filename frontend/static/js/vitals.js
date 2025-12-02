@@ -41,6 +41,68 @@ function setupVitalsListeners() {
     if (measureBtn) {
         measureBtn.addEventListener('click', toggleMeasurement);
     }
+
+    // Manual BPM input handler
+    const manualSaveBtn = document.getElementById('manual-save-btn');
+    const manualBpmInput = document.getElementById('manual-bpm');
+
+    if (manualSaveBtn && manualBpmInput) {
+        manualSaveBtn.addEventListener('click', () => {
+            const bpm = parseInt(manualBpmInput.value);
+            if (bpm >= 30 && bpm <= 250) {
+                displayResult(bpm);
+                manualBpmInput.value = '';
+                showVitalsAlert('Heart rate saved successfully!', 'success');
+            } else {
+                showVitalsAlert('Please enter a valid heart rate (30-250 BPM)', 'warning');
+            }
+        });
+
+        // Allow Enter key to submit
+        manualBpmInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                manualSaveBtn.click();
+            }
+        });
+    }
+
+    // Check auth and update nav
+    checkAuthStatus();
+}
+
+// Check authentication status
+async function checkAuthStatus() {
+    try {
+        const response = await fetch('/api/auth/me', { credentials: 'include' });
+        const data = await response.json();
+
+        const authLinks = document.getElementById('auth-links');
+        const userLinks = document.getElementById('user-links');
+
+        if (data.authenticated) {
+            if (authLinks) authLinks.style.display = 'none';
+            if (userLinks) userLinks.style.display = 'inline';
+        } else {
+            if (authLinks) authLinks.style.display = 'inline';
+            if (userLinks) userLinks.style.display = 'none';
+        }
+    } catch (error) {
+        console.log('Auth check failed');
+    }
+
+    // Setup logout handler
+    const logoutBtn = document.getElementById('logout-btn');
+    if (logoutBtn) {
+        logoutBtn.addEventListener('click', async (e) => {
+            e.preventDefault();
+            try {
+                await fetch('/api/auth/logout', { method: 'POST', credentials: 'include' });
+                window.location.reload();
+            } catch (error) {
+                console.error('Logout failed');
+            }
+        });
+    }
 }
 
 // ==================== Heart Rate Measurement ====================

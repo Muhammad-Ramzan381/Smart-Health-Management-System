@@ -5,184 +5,489 @@
       "name": "headache",
       "category": "neurological",
       "severity_range": [1, 10],
-      "related_symptoms": ["migraine", "stress", "fatigue", "eye strain"]
+      "description": "Pain or discomfort in the head, scalp, or neck",
+      "related_symptoms": ["migraine", "stress", "fatigue", "eye strain", "tension", "dizziness"]
     },
     {
       "id": 2,
       "name": "fever",
       "category": "general",
       "severity_range": [1, 10],
-      "related_symptoms": ["cold", "flu", "infection", "body ache"]
+      "description": "Elevated body temperature above normal range",
+      "related_symptoms": ["cold", "flu", "infection", "body ache", "chills", "sweating"]
     },
     {
       "id": 3,
       "name": "cough",
       "category": "respiratory",
       "severity_range": [1, 10],
-      "related_symptoms": ["cold", "sore throat", "congestion", "flu"]
+      "description": "Sudden expulsion of air from the lungs to clear airways",
+      "related_symptoms": ["cold", "sore throat", "congestion", "flu", "bronchitis", "chest tightness"]
     },
     {
       "id": 4,
       "name": "cold",
       "category": "respiratory",
       "severity_range": [1, 10],
-      "related_symptoms": ["cough", "runny nose", "sneezing", "sore throat"]
+      "description": "Common viral infection affecting nose and throat",
+      "related_symptoms": ["cough", "runny nose", "sneezing", "sore throat", "congestion", "fatigue"]
     },
     {
       "id": 5,
       "name": "sore throat",
       "category": "respiratory",
       "severity_range": [1, 10],
-      "related_symptoms": ["cold", "cough", "fever", "difficulty swallowing"]
+      "description": "Pain, scratchiness, or irritation of the throat",
+      "related_symptoms": ["cold", "cough", "fever", "difficulty swallowing", "hoarseness"]
     },
     {
       "id": 6,
       "name": "stomach ache",
       "category": "digestive",
       "severity_range": [1, 10],
-      "related_symptoms": ["nausea", "indigestion", "bloating", "diarrhea"]
+      "description": "Pain or discomfort in the abdominal region",
+      "related_symptoms": ["nausea", "indigestion", "bloating", "diarrhea", "cramps", "gas"]
     },
     {
       "id": 7,
       "name": "nausea",
       "category": "digestive",
       "severity_range": [1, 10],
-      "related_symptoms": ["vomiting", "stomach ache", "dizziness", "motion sickness"]
+      "description": "Feeling of unease in stomach with urge to vomit",
+      "related_symptoms": ["vomiting", "stomach ache", "dizziness", "motion sickness", "headache"]
     },
     {
       "id": 8,
       "name": "fatigue",
       "category": "general",
       "severity_range": [1, 10],
-      "related_symptoms": ["weakness", "tiredness", "low energy", "sleepiness"]
+      "description": "Extreme tiredness and lack of energy",
+      "related_symptoms": ["weakness", "tiredness", "low energy", "sleepiness", "exhaustion"]
     },
     {
       "id": 9,
       "name": "insomnia",
       "category": "sleep",
       "severity_range": [1, 10],
-      "related_symptoms": ["anxiety", "stress", "restlessness", "fatigue"]
+      "description": "Difficulty falling asleep or staying asleep",
+      "related_symptoms": ["anxiety", "stress", "restlessness", "fatigue", "irritability"]
     },
     {
       "id": 10,
       "name": "back pain",
       "category": "musculoskeletal",
       "severity_range": [1, 10],
-      "related_symptoms": ["muscle strain", "poor posture", "stiffness"]
+      "description": "Pain in the lower, middle, or upper back",
+      "related_symptoms": ["muscle strain", "poor posture", "stiffness", "sciatica", "spinal pain"]
     },
     {
       "id": 11,
       "name": "joint pain",
       "category": "musculoskeletal",
       "severity_range": [1, 10],
-      "related_symptoms": ["arthritis", "inflammation", "stiffness", "swelling"]
+      "description": "Discomfort, aches, and soreness in body joints",
+      "related_symptoms": ["arthritis", "inflammation", "stiffness", "swelling", "reduced mobility"]
     },
     {
       "id": 12,
       "name": "constipation",
       "category": "digestive",
       "severity_range": [1, 10],
-      "related_symptoms": ["bloating", "stomach discomfort", "indigestion"]
+      "description": "Difficulty or infrequent bowel movements",
+      "related_symptoms": ["bloating", "stomach discomfort", "indigestion", "abdominal pain"]
     },
     {
       "id": 13,
       "name": "diarrhea",
       "category": "digestive",
       "severity_range": [1, 10],
-      "related_symptoms": ["stomach ache", "dehydration", "nausea"]
+      "description": "Loose, watery bowel movements",
+      "related_symptoms": ["stomach ache", "dehydration", "nausea", "cramps", "fever"]
     },
     {
       "id": 14,
       "name": "acne",
       "category": "skin",
       "severity_range": [1, 10],
-      "related_symptoms": ["oily skin", "pimples", "skin inflammation"]
+      "description": "Skin condition causing pimples and inflammation",
+      "related_symptoms": ["oily skin", "pimples", "skin inflammation", "blackheads", "cysts"]
     },
     {
       "id": 15,
       "name": "anxiety",
       "category": "mental",
       "severity_range": [1, 10],
-      "related_symptoms": ["stress", "nervousness", "restlessness", "insomnia"]
+      "description": "Feeling of worry, nervousness, or unease",
+      "related_symptoms": ["stress", "nervousness", "restlessness", "insomnia", "panic", "rapid heartbeat"]
     },
     {
       "id": 16,
       "name": "stress",
       "category": "mental",
       "severity_range": [1, 10],
-      "related_symptoms": ["anxiety", "headache", "fatigue", "insomnia"]
+      "description": "Mental or emotional strain or tension",
+      "related_symptoms": ["anxiety", "headache", "fatigue", "insomnia", "irritability", "muscle tension"]
     },
     {
       "id": 17,
       "name": "high blood pressure",
       "category": "cardiovascular",
       "severity_range": [1, 10],
-      "related_symptoms": ["headache", "dizziness", "shortness of breath"]
+      "description": "Blood pressure higher than normal range",
+      "related_symptoms": ["headache", "dizziness", "shortness of breath", "chest pain", "vision problems"]
     },
     {
       "id": 18,
       "name": "low energy",
       "category": "general",
       "severity_range": [1, 10],
-      "related_symptoms": ["fatigue", "weakness", "tiredness"]
+      "description": "Lack of vitality and reduced stamina",
+      "related_symptoms": ["fatigue", "weakness", "tiredness", "lethargy", "drowsiness"]
     },
     {
       "id": 19,
       "name": "indigestion",
       "category": "digestive",
       "severity_range": [1, 10],
-      "related_symptoms": ["bloating", "heartburn", "stomach ache"]
+      "description": "Discomfort in upper abdomen after eating",
+      "related_symptoms": ["bloating", "heartburn", "stomach ache", "nausea", "gas"]
     },
     {
       "id": 20,
       "name": "allergies",
       "category": "immune",
       "severity_range": [1, 10],
-      "related_symptoms": ["sneezing", "runny nose", "itchy eyes", "skin rash"]
+      "description": "Immune system reaction to foreign substances",
+      "related_symptoms": ["sneezing", "runny nose", "itchy eyes", "skin rash", "congestion"]
     },
     {
       "id": 21,
       "name": "migraine",
       "category": "neurological",
       "severity_range": [1, 10],
-      "related_symptoms": ["headache", "nausea", "light sensitivity"]
+      "description": "Severe recurring headache often with visual disturbances",
+      "related_symptoms": ["headache", "nausea", "light sensitivity", "sound sensitivity", "aura"]
     },
     {
       "id": 22,
       "name": "dehydration",
       "category": "general",
       "severity_range": [1, 10],
-      "related_symptoms": ["thirst", "fatigue", "dizziness", "dry mouth"]
+      "description": "Loss of more fluid than intake",
+      "related_symptoms": ["thirst", "fatigue", "dizziness", "dry mouth", "dark urine"]
     },
     {
       "id": 23,
       "name": "bloating",
       "category": "digestive",
       "severity_range": [1, 10],
-      "related_symptoms": ["gas", "indigestion", "stomach discomfort"]
+      "description": "Feeling of fullness or swelling in the abdomen",
+      "related_symptoms": ["gas", "indigestion", "stomach discomfort", "constipation"]
     },
     {
       "id": 24,
       "name": "muscle cramps",
       "category": "musculoskeletal",
       "severity_range": [1, 10],
-      "related_symptoms": ["dehydration", "muscle strain", "electrolyte imbalance"]
+      "description": "Sudden, involuntary muscle contractions",
+      "related_symptoms": ["dehydration", "muscle strain", "electrolyte imbalance", "overexertion"]
     },
     {
       "id": 25,
       "name": "weight gain",
       "category": "metabolic",
       "severity_range": [1, 10],
-      "related_symptoms": ["slow metabolism", "overeating", "sedentary lifestyle"]
+      "description": "Increase in body weight",
+      "related_symptoms": ["slow metabolism", "overeating", "sedentary lifestyle", "hormonal imbalance"]
+    },
+    {
+      "id": 26,
+      "name": "dizziness",
+      "category": "neurological",
+      "severity_range": [1, 10],
+      "description": "Feeling of lightheadedness or unsteadiness",
+      "related_symptoms": ["vertigo", "nausea", "fainting", "dehydration", "low blood pressure"]
+    },
+    {
+      "id": 27,
+      "name": "heartburn",
+      "category": "digestive",
+      "severity_range": [1, 10],
+      "description": "Burning sensation in chest from acid reflux",
+      "related_symptoms": ["acid reflux", "indigestion", "chest pain", "difficulty swallowing"]
+    },
+    {
+      "id": 28,
+      "name": "congestion",
+      "category": "respiratory",
+      "severity_range": [1, 10],
+      "description": "Blocked or stuffy nasal passages",
+      "related_symptoms": ["cold", "allergies", "sinus pressure", "runny nose", "headache"]
+    },
+    {
+      "id": 29,
+      "name": "runny nose",
+      "category": "respiratory",
+      "severity_range": [1, 10],
+      "description": "Excess nasal discharge",
+      "related_symptoms": ["cold", "allergies", "sneezing", "congestion", "watery eyes"]
+    },
+    {
+      "id": 30,
+      "name": "sneezing",
+      "category": "respiratory",
+      "severity_range": [1, 10],
+      "description": "Sudden involuntary expulsion of air from nose",
+      "related_symptoms": ["allergies", "cold", "runny nose", "irritation", "dust"]
+    },
+    {
+      "id": 31,
+      "name": "itchy eyes",
+      "category": "eye",
+      "severity_range": [1, 10],
+      "description": "Irritation causing desire to rub eyes",
+      "related_symptoms": ["allergies", "dry eyes", "redness", "watering", "swelling"]
+    },
+    {
+      "id": 32,
+      "name": "dry skin",
+      "category": "skin",
+      "severity_range": [1, 10],
+      "description": "Skin lacking moisture and hydration",
+      "related_symptoms": ["itching", "flaking", "cracking", "roughness", "tightness"]
+    },
+    {
+      "id": 33,
+      "name": "eczema",
+      "category": "skin",
+      "severity_range": [1, 10],
+      "description": "Inflammatory skin condition causing itchy patches",
+      "related_symptoms": ["dry skin", "itching", "rash", "redness", "scaling"]
+    },
+    {
+      "id": 34,
+      "name": "hair loss",
+      "category": "hair",
+      "severity_range": [1, 10],
+      "description": "Excessive loss of hair from scalp or body",
+      "related_symptoms": ["thinning hair", "bald patches", "scalp issues", "stress"]
+    },
+    {
+      "id": 35,
+      "name": "depression",
+      "category": "mental",
+      "severity_range": [1, 10],
+      "description": "Persistent feelings of sadness and loss of interest",
+      "related_symptoms": ["sadness", "hopelessness", "fatigue", "insomnia", "appetite changes"]
+    },
+    {
+      "id": 36,
+      "name": "memory issues",
+      "category": "neurological",
+      "severity_range": [1, 10],
+      "description": "Difficulty remembering or concentrating",
+      "related_symptoms": ["brain fog", "confusion", "forgetfulness", "concentration problems"]
+    },
+    {
+      "id": 37,
+      "name": "shortness of breath",
+      "category": "respiratory",
+      "severity_range": [1, 10],
+      "description": "Difficulty breathing or feeling breathless",
+      "related_symptoms": ["chest tightness", "wheezing", "anxiety", "fatigue", "cough"]
+    },
+    {
+      "id": 38,
+      "name": "chest pain",
+      "category": "cardiovascular",
+      "severity_range": [1, 10],
+      "description": "Pain or discomfort in the chest area",
+      "related_symptoms": ["heartburn", "muscle strain", "anxiety", "breathing difficulty"]
+    },
+    {
+      "id": 39,
+      "name": "palpitations",
+      "category": "cardiovascular",
+      "severity_range": [1, 10],
+      "description": "Awareness of heart beating rapidly or irregularly",
+      "related_symptoms": ["anxiety", "stress", "caffeine", "fever", "anemia"]
+    },
+    {
+      "id": 40,
+      "name": "swelling",
+      "category": "general",
+      "severity_range": [1, 10],
+      "description": "Enlargement due to fluid accumulation",
+      "related_symptoms": ["inflammation", "injury", "water retention", "allergic reaction"]
+    },
+    {
+      "id": 41,
+      "name": "bruising",
+      "category": "skin",
+      "severity_range": [1, 10],
+      "description": "Discoloration from blood under the skin",
+      "related_symptoms": ["injury", "bleeding", "weakness", "vitamin deficiency"]
+    },
+    {
+      "id": 42,
+      "name": "toothache",
+      "category": "dental",
+      "severity_range": [1, 10],
+      "description": "Pain in or around a tooth",
+      "related_symptoms": ["dental cavity", "gum disease", "sensitivity", "jaw pain"]
+    },
+    {
+      "id": 43,
+      "name": "bad breath",
+      "category": "dental",
+      "severity_range": [1, 10],
+      "description": "Unpleasant odor from the mouth",
+      "related_symptoms": ["gum disease", "dry mouth", "poor hygiene", "digestive issues"]
+    },
+    {
+      "id": 44,
+      "name": "ear pain",
+      "category": "ear",
+      "severity_range": [1, 10],
+      "description": "Pain or discomfort in the ear",
+      "related_symptoms": ["ear infection", "fluid buildup", "jaw pain", "hearing issues"]
+    },
+    {
+      "id": 45,
+      "name": "tinnitus",
+      "category": "ear",
+      "severity_range": [1, 10],
+      "description": "Ringing or buzzing sound in the ears",
+      "related_symptoms": ["hearing loss", "ear damage", "stress", "blood pressure"]
+    },
+    {
+      "id": 46,
+      "name": "eye strain",
+      "category": "eye",
+      "severity_range": [1, 10],
+      "description": "Tired, aching eyes from overuse",
+      "related_symptoms": ["headache", "blurred vision", "dry eyes", "screen time"]
+    },
+    {
+      "id": 47,
+      "name": "neck pain",
+      "category": "musculoskeletal",
+      "severity_range": [1, 10],
+      "description": "Pain or stiffness in the neck region",
+      "related_symptoms": ["stiffness", "headache", "poor posture", "muscle tension"]
+    },
+    {
+      "id": 48,
+      "name": "shoulder pain",
+      "category": "musculoskeletal",
+      "severity_range": [1, 10],
+      "description": "Pain in the shoulder joint or muscles",
+      "related_symptoms": ["stiffness", "rotator cuff", "bursitis", "frozen shoulder"]
+    },
+    {
+      "id": 49,
+      "name": "knee pain",
+      "category": "musculoskeletal",
+      "severity_range": [1, 10],
+      "description": "Pain or discomfort in the knee",
+      "related_symptoms": ["arthritis", "injury", "swelling", "stiffness", "instability"]
+    },
+    {
+      "id": 50,
+      "name": "foot pain",
+      "category": "musculoskeletal",
+      "severity_range": [1, 10],
+      "description": "Pain or discomfort in the foot",
+      "related_symptoms": ["plantar fasciitis", "bunions", "heel pain", "arch pain"]
+    },
+    {
+      "id": 51,
+      "name": "diabetes symptoms",
+      "category": "metabolic",
+      "severity_range": [1, 10],
+      "description": "Signs related to blood sugar issues",
+      "related_symptoms": ["thirst", "frequent urination", "fatigue", "blurred vision", "slow healing"]
+    },
+    {
+      "id": 52,
+      "name": "thyroid issues",
+      "category": "hormonal",
+      "severity_range": [1, 10],
+      "description": "Symptoms related to thyroid dysfunction",
+      "related_symptoms": ["fatigue", "weight changes", "hair loss", "cold intolerance", "dry skin"]
+    },
+    {
+      "id": 53,
+      "name": "menstrual cramps",
+      "category": "reproductive",
+      "severity_range": [1, 10],
+      "description": "Pain during menstruation",
+      "related_symptoms": ["bloating", "back pain", "mood swings", "fatigue", "headache"]
+    },
+    {
+      "id": 54,
+      "name": "hot flashes",
+      "category": "hormonal",
+      "severity_range": [1, 10],
+      "description": "Sudden feeling of warmth in upper body",
+      "related_symptoms": ["sweating", "menopause", "anxiety", "heart palpitations"]
+    },
+    {
+      "id": 55,
+      "name": "urinary issues",
+      "category": "urinary",
+      "severity_range": [1, 10],
+      "description": "Problems with urination",
+      "related_symptoms": ["frequent urination", "burning sensation", "urgency", "incontinence"]
+    },
+    {
+      "id": 56,
+      "name": "acid reflux",
+      "category": "digestive",
+      "severity_range": [1, 10],
+      "description": "Stomach acid flowing back into esophagus",
+      "related_symptoms": ["heartburn", "regurgitation", "chest pain", "difficulty swallowing"]
+    },
+    {
+      "id": 57,
+      "name": "food poisoning",
+      "category": "digestive",
+      "severity_range": [1, 10],
+      "description": "Illness from contaminated food",
+      "related_symptoms": ["nausea", "vomiting", "diarrhea", "stomach cramps", "fever"]
+    },
+    {
+      "id": 58,
+      "name": "hangover",
+      "category": "general",
+      "severity_range": [1, 10],
+      "description": "Symptoms after excessive alcohol consumption",
+      "related_symptoms": ["headache", "nausea", "dehydration", "fatigue", "dizziness"]
+    },
+    {
+      "id": 59,
+      "name": "sunburn",
+      "category": "skin",
+      "severity_range": [1, 10],
+      "description": "Skin damage from UV radiation",
+      "related_symptoms": ["redness", "pain", "peeling", "blisters", "dehydration"]
+    },
+    {
+      "id": 60,
+      "name": "motion sickness",
+      "category": "neurological",
+      "severity_range": [1, 10],
+      "description": "Nausea from motion during travel",
+      "related_symptoms": ["nausea", "vomiting", "dizziness", "sweating", "headache"]
     }
   ],
   "home_remedies": [
     {
       "id": 1,
       "name": "Ginger Tea",
-      "description": "A warm beverage made with fresh ginger root",
-      "symptoms": ["nausea", "cold", "sore throat", "indigestion", "stomach ache"],
-      "ingredients": ["Fresh ginger (1 inch)", "Water (1 cup)", "Honey (optional)", "Lemon (optional)"],
+      "description": "A warm beverage made with fresh ginger root that helps with digestion and nausea",
+      "symptoms": ["nausea", "cold", "sore throat", "indigestion", "stomach ache", "motion sickness", "bloating"],
+      "ingredients": ["Fresh ginger (1 inch)", "Water (1 cup)", "Honey (1 tsp, optional)", "Lemon (optional)"],
       "preparation": "1. Peel and slice fresh ginger. 2. Boil water and add ginger slices. 3. Simmer for 10 minutes. 4. Strain and add honey/lemon if desired.",
       "effectiveness": 8,
       "time_to_effect": "15-30 minutes",
@@ -191,8 +496,8 @@
     {
       "id": 2,
       "name": "Honey and Lemon Water",
-      "description": "Warm water mixed with honey and fresh lemon juice",
-      "symptoms": ["sore throat", "cold", "cough", "fatigue", "low energy"],
+      "description": "Warm water mixed with honey and fresh lemon juice for immune support",
+      "symptoms": ["sore throat", "cold", "cough", "fatigue", "low energy", "dehydration"],
       "ingredients": ["Warm water (1 glass)", "Honey (1 tbsp)", "Lemon juice (half lemon)"],
       "preparation": "1. Heat water until warm (not boiling). 2. Add honey and stir. 3. Squeeze in fresh lemon juice. 4. Drink while warm.",
       "effectiveness": 7,
@@ -202,462 +507,838 @@
     {
       "id": 3,
       "name": "Turmeric Milk (Golden Milk)",
-      "description": "Warm milk infused with turmeric and spices",
-      "symptoms": ["cold", "cough", "insomnia", "joint pain", "inflammation"],
-      "ingredients": ["Milk (1 cup)", "Turmeric powder (1/2 tsp)", "Black pepper (pinch)", "Honey (optional)"],
-      "preparation": "1. Heat milk in a pan. 2. Add turmeric and black pepper. 3. Simmer for 5 minutes. 4. Add honey for sweetness.",
+      "description": "Warm milk infused with turmeric and spices for anti-inflammatory benefits",
+      "symptoms": ["cold", "cough", "insomnia", "joint pain", "inflammation", "arthritis", "muscle pain"],
+      "ingredients": ["Milk (1 cup)", "Turmeric powder (1/2 tsp)", "Black pepper (pinch)", "Honey (optional)", "Cinnamon (optional)"],
+      "preparation": "1. Heat milk in a pan. 2. Add turmeric, black pepper, and cinnamon. 3. Simmer for 5 minutes stirring occasionally. 4. Add honey for sweetness.",
       "effectiveness": 8,
       "time_to_effect": "30 minutes to 1 hour",
-      "safety_notes": "Avoid if lactose intolerant. Use plant-based milk as alternative."
+      "safety_notes": "Avoid if lactose intolerant. Use plant-based milk as alternative. Black pepper enhances turmeric absorption."
     },
     {
       "id": 4,
       "name": "Peppermint Tea",
-      "description": "Herbal tea made with peppermint leaves",
-      "symptoms": ["headache", "indigestion", "nausea", "bloating", "stress"],
-      "ingredients": ["Peppermint leaves (fresh or dried)", "Hot water (1 cup)", "Honey (optional)"],
+      "description": "Herbal tea made with peppermint leaves for digestive and headache relief",
+      "symptoms": ["headache", "indigestion", "nausea", "bloating", "stress", "gas", "migraine"],
+      "ingredients": ["Peppermint leaves (fresh or dried, 1 tbsp)", "Hot water (1 cup)", "Honey (optional)"],
       "preparation": "1. Place peppermint leaves in a cup. 2. Pour hot water over leaves. 3. Steep for 5-10 minutes. 4. Strain and add honey if desired.",
       "effectiveness": 7,
       "time_to_effect": "15-20 minutes",
-      "safety_notes": "Avoid if you have acid reflux. Not recommended for infants."
+      "safety_notes": "Avoid if you have acid reflux or GERD. Not recommended for infants."
     },
     {
       "id": 5,
       "name": "Salt Water Gargle",
-      "description": "Warm salt water solution for gargling",
-      "symptoms": ["sore throat", "cold", "cough"],
+      "description": "Warm salt water solution for gargling to relieve throat pain",
+      "symptoms": ["sore throat", "cold", "cough", "bad breath", "toothache", "gum disease"],
       "ingredients": ["Warm water (1 glass)", "Salt (1/2 tsp)"],
-      "preparation": "1. Dissolve salt in warm water. 2. Gargle for 30 seconds. 3. Spit out. 4. Repeat 2-3 times daily.",
+      "preparation": "1. Dissolve salt in warm water. 2. Gargle for 30 seconds. 3. Spit out (do not swallow). 4. Repeat 2-3 times daily.",
       "effectiveness": 7,
       "time_to_effect": "Immediate relief",
-      "safety_notes": "Do not swallow. Safe for most ages."
+      "safety_notes": "Do not swallow. Safe for most ages. Avoid if on sodium-restricted diet."
     },
     {
       "id": 6,
       "name": "Steam Inhalation",
-      "description": "Breathing in steam to clear congestion",
-      "symptoms": ["cold", "congestion", "sinus", "cough"],
-      "ingredients": ["Hot water (bowl)", "Eucalyptus oil (optional, 2-3 drops)", "Towel"],
-      "preparation": "1. Boil water and pour into a bowl. 2. Add eucalyptus oil if using. 3. Cover head with towel over the bowl. 4. Breathe deeply for 5-10 minutes.",
+      "description": "Breathing in steam to clear congestion and open airways",
+      "symptoms": ["cold", "congestion", "sinus", "cough", "bronchitis", "allergies"],
+      "ingredients": ["Hot water (bowl)", "Eucalyptus oil (2-3 drops, optional)", "Towel"],
+      "preparation": "1. Boil water and pour into a bowl. 2. Add eucalyptus oil if using. 3. Cover head with towel over the bowl. 4. Breathe deeply for 5-10 minutes. 5. Keep eyes closed.",
       "effectiveness": 8,
       "time_to_effect": "Immediate",
-      "safety_notes": "Keep safe distance to avoid burns. Not for young children."
+      "safety_notes": "Keep safe distance to avoid burns. Not suitable for young children. Avoid if asthmatic without medical advice."
     },
     {
       "id": 7,
       "name": "Apple Cider Vinegar Tonic",
-      "description": "Diluted apple cider vinegar drink",
-      "symptoms": ["indigestion", "bloating", "weight gain", "fatigue"],
+      "description": "Diluted apple cider vinegar drink for digestive health",
+      "symptoms": ["indigestion", "bloating", "weight gain", "fatigue", "acid reflux", "heartburn"],
       "ingredients": ["Apple cider vinegar (1 tbsp)", "Water (1 glass)", "Honey (1 tsp)"],
-      "preparation": "1. Mix ACV in water. 2. Add honey for taste. 3. Drink before meals.",
+      "preparation": "1. Mix ACV in water thoroughly. 2. Add honey for taste. 3. Drink before meals. 4. Use a straw to protect teeth.",
       "effectiveness": 6,
       "time_to_effect": "30 minutes",
-      "safety_notes": "Always dilute. Can erode tooth enamel - use straw."
+      "safety_notes": "Always dilute - never drink undiluted. Can erode tooth enamel. Not recommended for those with stomach ulcers."
     },
     {
       "id": 8,
       "name": "Chamomile Tea",
-      "description": "Calming herbal tea made from chamomile flowers",
-      "symptoms": ["insomnia", "anxiety", "stress", "stomach ache", "headache"],
-      "ingredients": ["Chamomile tea bag or dried flowers", "Hot water (1 cup)", "Honey (optional)"],
-      "preparation": "1. Place chamomile in cup. 2. Add hot water. 3. Steep for 5 minutes. 4. Add honey if desired.",
+      "description": "Calming herbal tea made from chamomile flowers for relaxation",
+      "symptoms": ["insomnia", "anxiety", "stress", "stomach ache", "headache", "menstrual cramps", "depression"],
+      "ingredients": ["Chamomile tea bag or dried flowers (1-2 tsp)", "Hot water (1 cup)", "Honey (optional)"],
+      "preparation": "1. Place chamomile in cup. 2. Add hot water. 3. Steep for 5 minutes covered. 4. Strain and add honey if desired. 5. Drink 30 mins before bed for sleep.",
       "effectiveness": 8,
       "time_to_effect": "20-30 minutes",
-      "safety_notes": "Avoid if allergic to ragweed. May interact with blood thinners."
+      "safety_notes": "Avoid if allergic to ragweed or daisies. May interact with blood thinners and sedatives."
     },
     {
       "id": 9,
       "name": "Aloe Vera Gel",
-      "description": "Natural gel from aloe vera plant for skin application",
-      "symptoms": ["acne", "skin rash", "burns", "skin inflammation"],
+      "description": "Natural gel from aloe vera plant for skin healing and soothing",
+      "symptoms": ["acne", "sunburn", "dry skin", "eczema", "burns", "skin inflammation", "rash"],
       "ingredients": ["Fresh aloe vera leaf or pure aloe gel"],
-      "preparation": "1. Cut aloe leaf and extract gel. 2. Apply directly to affected area. 3. Leave for 15-20 minutes. 4. Rinse with cool water.",
+      "preparation": "1. Cut aloe leaf and extract clear gel. 2. Apply directly to affected area. 3. Leave for 15-20 minutes. 4. Rinse with cool water. 5. Repeat 2-3 times daily.",
       "effectiveness": 8,
       "time_to_effect": "Immediate soothing, healing over days",
-      "safety_notes": "Do a patch test first. Do not apply to deep wounds."
+      "safety_notes": "Do a patch test first for allergies. Do not apply to deep wounds. Use pure aloe without additives."
     },
     {
       "id": 10,
       "name": "Cold Compress",
-      "description": "Cold pack application for inflammation",
-      "symptoms": ["headache", "fever", "swelling", "muscle strain", "migraine"],
-      "ingredients": ["Ice cubes", "Clean cloth or towel"],
-      "preparation": "1. Wrap ice in cloth. 2. Apply to affected area. 3. Keep for 15-20 minutes. 4. Take breaks between applications.",
+      "description": "Cold pack application for reducing inflammation and pain",
+      "symptoms": ["headache", "fever", "swelling", "muscle strain", "migraine", "bruising", "toothache", "eye strain"],
+      "ingredients": ["Ice cubes or cold pack", "Clean cloth or towel"],
+      "preparation": "1. Wrap ice in cloth (never apply directly to skin). 2. Apply to affected area. 3. Keep for 15-20 minutes. 4. Take 10-minute breaks between applications.",
       "effectiveness": 7,
       "time_to_effect": "Immediate",
-      "safety_notes": "Never apply ice directly to skin. Limit to 20 minutes at a time."
+      "safety_notes": "Never apply ice directly to skin. Limit to 20 minutes at a time. Not for circulation problems."
     },
     {
       "id": 11,
       "name": "Warm Compress",
-      "description": "Warm cloth application for muscle relaxation",
-      "symptoms": ["back pain", "muscle cramps", "joint pain", "stiffness"],
-      "ingredients": ["Clean cloth", "Warm water"],
-      "preparation": "1. Soak cloth in warm water. 2. Wring out excess water. 3. Apply to affected area. 4. Replace when it cools down.",
+      "description": "Warm cloth application for muscle relaxation and pain relief",
+      "symptoms": ["back pain", "muscle cramps", "joint pain", "stiffness", "neck pain", "shoulder pain", "menstrual cramps", "ear pain"],
+      "ingredients": ["Clean cloth", "Warm water", "Optional: heating pad"],
+      "preparation": "1. Soak cloth in warm water. 2. Wring out excess water. 3. Apply to affected area. 4. Replace when it cools down. 5. Continue for 15-20 minutes.",
       "effectiveness": 7,
       "time_to_effect": "10-15 minutes",
-      "safety_notes": "Test temperature before applying. Not for fresh injuries."
+      "safety_notes": "Test temperature before applying. Not for fresh injuries (first 48 hours). Avoid on open wounds."
     },
     {
       "id": 12,
       "name": "Fennel Seeds Water",
-      "description": "Water infused with fennel seeds for digestion",
-      "symptoms": ["bloating", "indigestion", "constipation", "stomach ache"],
+      "description": "Water infused with fennel seeds for digestive comfort",
+      "symptoms": ["bloating", "indigestion", "constipation", "stomach ache", "gas", "acid reflux"],
       "ingredients": ["Fennel seeds (1 tsp)", "Water (1 cup)"],
-      "preparation": "1. Soak fennel seeds in water overnight. 2. Strain and drink in morning. Or boil seeds in water for quick preparation.",
+      "preparation": "1. Soak fennel seeds in water overnight OR 2. Boil seeds in water for 5 minutes. 3. Strain and drink. 4. Can be consumed warm or at room temperature.",
       "effectiveness": 7,
       "time_to_effect": "30 minutes",
-      "safety_notes": "Safe for most. Avoid excessive consumption during pregnancy."
+      "safety_notes": "Safe for most people. Avoid excessive consumption during pregnancy. May interact with some medications."
     },
     {
       "id": 13,
       "name": "Banana for Energy",
-      "description": "Eating bananas for quick energy and muscle recovery",
-      "symptoms": ["low energy", "fatigue", "muscle cramps", "weakness"],
+      "description": "Eating bananas for quick energy and electrolyte replenishment",
+      "symptoms": ["low energy", "fatigue", "muscle cramps", "weakness", "dehydration", "hangover"],
       "ingredients": ["Ripe banana (1-2)"],
-      "preparation": "Eat as a snack, add to smoothie, or slice over oatmeal.",
+      "preparation": "Eat as a snack, add to smoothie, slice over oatmeal, or freeze for a cool treat.",
       "effectiveness": 7,
       "time_to_effect": "15-30 minutes",
-      "safety_notes": "Moderate consumption for diabetics due to sugar content."
+      "safety_notes": "Moderate consumption for diabetics due to sugar content. High in potassium - consult doctor if on certain medications."
     },
     {
       "id": 14,
       "name": "Epsom Salt Bath",
-      "description": "Warm bath with Epsom salts for muscle relaxation",
-      "symptoms": ["muscle cramps", "back pain", "stress", "joint pain", "fatigue"],
-      "ingredients": ["Epsom salt (1-2 cups)", "Warm bath water"],
-      "preparation": "1. Fill bathtub with warm water. 2. Add Epsom salt and stir. 3. Soak for 15-20 minutes. 4. Rinse and rest.",
+      "description": "Warm bath with Epsom salts for muscle relaxation and detox",
+      "symptoms": ["muscle cramps", "back pain", "stress", "joint pain", "fatigue", "foot pain", "soreness"],
+      "ingredients": ["Epsom salt (1-2 cups)", "Warm bath water", "Essential oils (optional)"],
+      "preparation": "1. Fill bathtub with warm water. 2. Add Epsom salt and stir to dissolve. 3. Add a few drops of lavender oil if desired. 4. Soak for 15-20 minutes. 5. Rinse and rest.",
       "effectiveness": 8,
       "time_to_effect": "During and after bath",
-      "safety_notes": "Avoid if you have diabetes or kidney problems. Stay hydrated."
+      "safety_notes": "Avoid if you have diabetes, kidney problems, or heart conditions. Stay hydrated. Don't use very hot water."
     },
     {
       "id": 15,
       "name": "Garlic Remedy",
-      "description": "Raw or cooked garlic for immune support",
-      "symptoms": ["cold", "flu", "high blood pressure", "allergies"],
-      "ingredients": ["Fresh garlic cloves (2-3)", "Honey (optional)"],
-      "preparation": "1. Crush or chop garlic to release allicin. 2. Let sit for 10 minutes. 3. Consume raw with honey or add to food.",
+      "description": "Raw or cooked garlic for immune support and cardiovascular health",
+      "symptoms": ["cold", "flu", "high blood pressure", "allergies", "infection", "cholesterol"],
+      "ingredients": ["Fresh garlic cloves (2-3)", "Honey (1 tsp, optional)"],
+      "preparation": "1. Crush or finely chop garlic to release allicin. 2. Let sit for 10 minutes to activate compounds. 3. Consume raw with honey or add to food. 4. Can also steep in warm water for garlic tea.",
       "effectiveness": 7,
-      "time_to_effect": "Several hours to days",
-      "safety_notes": "May cause digestive upset. Avoid on empty stomach."
+      "time_to_effect": "Several hours to days for systemic effects",
+      "safety_notes": "May cause digestive upset on empty stomach. Avoid before surgery. Can interact with blood thinners."
+    },
+    {
+      "id": 16,
+      "name": "Oatmeal Bath",
+      "description": "Colloidal oatmeal bath for skin relief and irritation",
+      "symptoms": ["dry skin", "eczema", "itching", "sunburn", "rash", "allergies"],
+      "ingredients": ["Colloidal oatmeal or finely ground oats (1 cup)", "Lukewarm bath water"],
+      "preparation": "1. Grind oats into fine powder if not using colloidal oatmeal. 2. Add to running bath water. 3. Soak for 15-20 minutes. 4. Pat dry gently, don't rub. 5. Apply moisturizer after.",
+      "effectiveness": 7,
+      "time_to_effect": "During bath, relief lasts hours",
+      "safety_notes": "Use lukewarm water, not hot. Be careful as tub may be slippery. Avoid if allergic to oats."
+    },
+    {
+      "id": 17,
+      "name": "Cinnamon and Honey",
+      "description": "Natural combination with antimicrobial and anti-inflammatory properties",
+      "symptoms": ["cold", "cough", "sore throat", "indigestion", "fatigue", "weight gain"],
+      "ingredients": ["Cinnamon powder (1/2 tsp)", "Honey (1 tbsp)", "Warm water (1 cup)"],
+      "preparation": "1. Mix cinnamon and honey in warm water. 2. Stir well until dissolved. 3. Drink on empty stomach or before bed. 4. Can also make paste for direct application.",
+      "effectiveness": 6,
+      "time_to_effect": "30 minutes to 1 hour",
+      "safety_notes": "Use Ceylon cinnamon if possible (less coumarin). Not for children under 1 year. Avoid large amounts during pregnancy."
+    },
+    {
+      "id": 18,
+      "name": "Green Tea",
+      "description": "Antioxidant-rich tea for overall health and energy",
+      "symptoms": ["fatigue", "weight gain", "low energy", "stress", "headache", "high blood pressure"],
+      "ingredients": ["Green tea bag or loose leaves (1 tsp)", "Hot water (1 cup)", "Lemon or honey (optional)"],
+      "preparation": "1. Heat water to 175°F (not boiling). 2. Steep tea for 2-3 minutes. 3. Remove tea to avoid bitterness. 4. Add lemon or honey if desired.",
+      "effectiveness": 7,
+      "time_to_effect": "15-30 minutes for energy boost",
+      "safety_notes": "Contains caffeine - avoid late in day. May interact with some medications. Limit to 3-4 cups daily."
+    },
+    {
+      "id": 19,
+      "name": "Lavender Oil Aromatherapy",
+      "description": "Essential oil therapy for relaxation and sleep support",
+      "symptoms": ["insomnia", "anxiety", "stress", "headache", "depression", "restlessness"],
+      "ingredients": ["Lavender essential oil", "Diffuser or cotton ball", "Carrier oil (for topical use)"],
+      "preparation": "1. Add 3-5 drops to diffuser OR 2. Put 2 drops on pillow OR 3. Mix with carrier oil and apply to temples/wrists. 4. Inhale deeply and relax.",
+      "effectiveness": 7,
+      "time_to_effect": "15-30 minutes",
+      "safety_notes": "Never ingest essential oils. Dilute before skin application. Not for use during pregnancy without medical advice."
+    },
+    {
+      "id": 20,
+      "name": "Coconut Oil Treatment",
+      "description": "Natural oil for skin and hair health",
+      "symptoms": ["dry skin", "hair loss", "eczema", "dandruff", "cracked heels"],
+      "ingredients": ["Virgin coconut oil (as needed)"],
+      "preparation": "For skin: Apply thin layer and massage in. For hair: Warm oil, apply to scalp and hair, leave 30 min, then wash. For lips: Apply small amount as lip balm.",
+      "effectiveness": 7,
+      "time_to_effect": "Immediate moisturizing, improvement over days",
+      "safety_notes": "May cause breakouts for acne-prone skin. Do patch test first. Use extra virgin for best quality."
+    },
+    {
+      "id": 21,
+      "name": "Lemon Water Morning Detox",
+      "description": "Warm lemon water first thing in morning for hydration and digestion",
+      "symptoms": ["dehydration", "indigestion", "fatigue", "constipation", "weight gain", "low energy"],
+      "ingredients": ["Fresh lemon (half)", "Warm water (1 glass)"],
+      "preparation": "1. Squeeze lemon into warm water. 2. Drink immediately on empty stomach. 3. Wait 15-30 minutes before eating. 4. Rinse mouth with plain water after to protect teeth.",
+      "effectiveness": 6,
+      "time_to_effect": "Immediate hydration, digestive benefits within 30 minutes",
+      "safety_notes": "Can erode tooth enamel - use straw or rinse after. Not recommended for acid reflux sufferers."
+    },
+    {
+      "id": 22,
+      "name": "Clove Oil for Toothache",
+      "description": "Natural analgesic for dental pain relief",
+      "symptoms": ["toothache", "gum disease", "bad breath"],
+      "ingredients": ["Clove oil", "Cotton ball", "Carrier oil (optional)"],
+      "preparation": "1. Dilute clove oil with carrier oil (1:1 ratio). 2. Soak cotton ball in mixture. 3. Apply to affected tooth/gum area. 4. Leave for 15-20 minutes. 5. Rinse with salt water.",
+      "effectiveness": 8,
+      "time_to_effect": "5-10 minutes for pain relief",
+      "safety_notes": "Use sparingly - can irritate gums if overused. Not a substitute for dental care. Avoid swallowing."
+    },
+    {
+      "id": 23,
+      "name": "Ginger Compress for Pain",
+      "description": "Topical ginger application for localized pain relief",
+      "symptoms": ["joint pain", "back pain", "muscle cramps", "arthritis", "neck pain"],
+      "ingredients": ["Fresh ginger (grated, 2 tbsp)", "Hot water", "Clean cloth"],
+      "preparation": "1. Grate fresh ginger. 2. Wrap in cloth and steep in hot water. 3. When cool enough to touch, apply to painful area. 4. Leave for 15-20 minutes. 5. Repeat 2-3 times daily.",
+      "effectiveness": 7,
+      "time_to_effect": "15-30 minutes",
+      "safety_notes": "Test temperature before applying. May cause skin sensitivity in some people. Don't use on broken skin."
+    },
+    {
+      "id": 24,
+      "name": "Honey Face Mask",
+      "description": "Natural face treatment for skin health",
+      "symptoms": ["acne", "dry skin", "dull skin", "wrinkles"],
+      "ingredients": ["Raw honey (2 tbsp)", "Optional: cinnamon, turmeric, or oatmeal"],
+      "preparation": "1. Apply raw honey to clean face. 2. Leave for 15-20 minutes. 3. Rinse with warm water. 4. Pat dry and moisturize. 5. Use 2-3 times per week.",
+      "effectiveness": 7,
+      "time_to_effect": "Immediate softening, visible improvement over weeks",
+      "safety_notes": "Not for those allergic to bee products. Use raw, unprocessed honey for best results."
+    },
+    {
+      "id": 25,
+      "name": "Probiotic Foods",
+      "description": "Fermented foods for gut health and immunity",
+      "symptoms": ["indigestion", "bloating", "constipation", "diarrhea", "allergies", "low immunity"],
+      "ingredients": ["Yogurt, kefir, sauerkraut, kimchi, or kombucha"],
+      "preparation": "Include one serving of probiotic food daily. Start with small amounts if new to fermented foods. Choose products with live active cultures.",
+      "effectiveness": 7,
+      "time_to_effect": "1-2 weeks for noticeable gut improvement",
+      "safety_notes": "Start slowly to avoid digestive upset. Check sugar content in commercial products. Not for severe immune deficiency."
+    },
+    {
+      "id": 26,
+      "name": "Eucalyptus Steam",
+      "description": "Eucalyptus-infused steam for respiratory relief",
+      "symptoms": ["congestion", "cold", "cough", "sinus", "bronchitis", "allergies"],
+      "ingredients": ["Eucalyptus essential oil (5-10 drops)", "Hot water (bowl)", "Towel"],
+      "preparation": "1. Boil water and pour into bowl. 2. Add eucalyptus oil. 3. Tent head with towel over bowl. 4. Breathe deeply through nose for 5-10 minutes. 5. Keep eyes closed.",
+      "effectiveness": 8,
+      "time_to_effect": "Immediate relief",
+      "safety_notes": "Not for children under 10. Keep safe distance from hot water. Not recommended for asthmatics without medical advice."
+    },
+    {
+      "id": 27,
+      "name": "Baking Soda Bath",
+      "description": "Baking soda soak for skin irritation and detox",
+      "symptoms": ["itching", "eczema", "sunburn", "urinary issues", "yeast infection"],
+      "ingredients": ["Baking soda (1/4 to 2 cups)", "Warm bath water"],
+      "preparation": "1. Add baking soda to warm bath water. 2. Stir to dissolve. 3. Soak for 15-20 minutes. 4. Rinse with clean water. 5. Pat dry gently.",
+      "effectiveness": 6,
+      "time_to_effect": "During and after bath",
+      "safety_notes": "Don't use on broken skin. May dry out skin - moisturize after. Not for daily use."
+    },
+    {
+      "id": 28,
+      "name": "Cumin Water",
+      "description": "Cumin-infused water for digestive health and metabolism",
+      "symptoms": ["bloating", "indigestion", "weight gain", "gas", "constipation"],
+      "ingredients": ["Cumin seeds (1 tsp)", "Water (1 cup)"],
+      "preparation": "1. Soak cumin seeds in water overnight OR 2. Boil seeds in water for 5 minutes. 3. Strain and drink. 4. Best consumed on empty stomach morning.",
+      "effectiveness": 6,
+      "time_to_effect": "30 minutes to 1 hour",
+      "safety_notes": "Safe for most people. May lower blood sugar - monitor if diabetic. Avoid excessive amounts during pregnancy."
+    },
+    {
+      "id": 29,
+      "name": "Witch Hazel Toner",
+      "description": "Natural astringent for skin care",
+      "symptoms": ["acne", "oily skin", "swelling", "bruising", "hemorrhoids"],
+      "ingredients": ["Witch hazel extract (alcohol-free preferred)", "Cotton pad"],
+      "preparation": "1. Apply witch hazel to cotton pad. 2. Gently wipe affected area. 3. Allow to dry. 4. Follow with moisturizer if needed. 5. Use twice daily.",
+      "effectiveness": 7,
+      "time_to_effect": "Immediate toning, acne improvement over weeks",
+      "safety_notes": "Avoid eye area. May cause dryness - use alcohol-free version. Do patch test first."
+    },
+    {
+      "id": 30,
+      "name": "Valerian Root Tea",
+      "description": "Herbal tea for sleep and relaxation",
+      "symptoms": ["insomnia", "anxiety", "stress", "restlessness", "menstrual cramps"],
+      "ingredients": ["Valerian root tea or dried root (1 tsp)", "Hot water (1 cup)", "Honey (optional)"],
+      "preparation": "1. Steep valerian in hot water for 10-15 minutes. 2. Strain and add honey if desired. 3. Drink 30 minutes to 1 hour before bed.",
+      "effectiveness": 7,
+      "time_to_effect": "30 minutes to 1 hour",
+      "safety_notes": "May cause drowsiness - don't drive after. Can interact with sedatives. Not for long-term use without breaks."
     }
   ],
   "diet_plans": [
     {
       "id": 1,
       "name": "Anti-Inflammatory Diet",
-      "description": "Diet focused on reducing inflammation in the body",
-      "symptoms": ["joint pain", "back pain", "inflammation", "arthritis", "muscle pain"],
+      "description": "Diet focused on reducing inflammation in the body through whole foods",
+      "symptoms": ["joint pain", "back pain", "inflammation", "arthritis", "muscle pain", "swelling", "eczema"],
       "foods_to_eat": [
-        "Fatty fish (salmon, mackerel)",
-        "Leafy greens (spinach, kale)",
-        "Berries (blueberries, strawberries)",
-        "Nuts (almonds, walnuts)",
-        "Olive oil",
-        "Turmeric",
-        "Ginger",
-        "Tomatoes"
+        "Fatty fish (salmon, mackerel, sardines)",
+        "Leafy greens (spinach, kale, collards)",
+        "Berries (blueberries, strawberries, raspberries)",
+        "Nuts (almonds, walnuts, pecans)",
+        "Extra virgin olive oil",
+        "Turmeric and ginger",
+        "Tomatoes",
+        "Green tea",
+        "Dark chocolate (70%+ cacao)",
+        "Avocados"
       ],
       "foods_to_avoid": [
-        "Processed foods",
+        "Processed foods and fast food",
         "Fried foods",
-        "Red meat (excess)",
-        "Sugar and sweets",
-        "White bread",
-        "Alcohol"
+        "Red meat (limit to once per week)",
+        "Sugar and artificial sweeteners",
+        "White bread and refined carbs",
+        "Alcohol (limit)",
+        "Vegetable oils (corn, soybean)",
+        "Trans fats"
       ],
       "meal_suggestions": {
-        "breakfast": "Oatmeal with berries and walnuts",
-        "lunch": "Grilled salmon salad with olive oil dressing",
-        "dinner": "Baked fish with steamed vegetables",
-        "snacks": "Handful of almonds, fresh fruits"
+        "breakfast": "Oatmeal with berries, walnuts, and a drizzle of honey",
+        "lunch": "Grilled salmon salad with olive oil dressing and mixed greens",
+        "dinner": "Baked fish with turmeric, steamed vegetables, and quinoa",
+        "snacks": "Handful of almonds, fresh fruits, dark chocolate square"
       },
       "effectiveness": 9,
-      "duration": "Ongoing lifestyle"
+      "duration": "Ongoing lifestyle - minimum 4 weeks to see results"
     },
     {
       "id": 2,
       "name": "Digestive Health Diet",
-      "description": "Diet to improve digestion and gut health",
-      "symptoms": ["stomach ache", "indigestion", "bloating", "constipation", "diarrhea", "nausea"],
+      "description": "Diet designed to improve digestion, gut health, and reduce GI discomfort",
+      "symptoms": ["stomach ache", "indigestion", "bloating", "constipation", "diarrhea", "nausea", "gas", "acid reflux"],
       "foods_to_eat": [
-        "Yogurt with probiotics",
-        "Bananas",
-        "Ginger",
-        "Whole grains",
+        "Yogurt with live probiotics",
+        "Bananas and papayas",
+        "Ginger and fennel",
+        "Whole grains (oats, brown rice)",
         "Leafy vegetables",
-        "Papaya",
-        "Fennel",
-        "Lean proteins"
+        "Lean proteins (chicken, fish)",
+        "Bone broth",
+        "Fermented foods (kimchi, sauerkraut)"
       ],
       "foods_to_avoid": [
         "Spicy foods",
-        "Fried foods",
+        "Fried and fatty foods",
         "Carbonated drinks",
-        "Caffeine (excess)",
+        "Excessive caffeine",
         "Dairy (if intolerant)",
-        "Artificial sweeteners"
+        "Artificial sweeteners",
+        "Beans and lentils (if causing gas)",
+        "Alcohol"
       ],
       "meal_suggestions": {
-        "breakfast": "Yogurt parfait with banana and oats",
-        "lunch": "Grilled chicken with steamed rice and vegetables",
-        "dinner": "Light soup with whole grain bread",
-        "snacks": "Papaya slices, herbal tea"
+        "breakfast": "Yogurt parfait with banana, oats, and a touch of honey",
+        "lunch": "Grilled chicken with steamed rice and gently cooked vegetables",
+        "dinner": "Light vegetable soup with whole grain bread",
+        "snacks": "Papaya slices, ginger tea, plain crackers"
       },
       "effectiveness": 8,
-      "duration": "2-4 weeks minimum"
+      "duration": "2-4 weeks minimum, ongoing maintenance"
     },
     {
       "id": 3,
       "name": "Energy Boosting Diet",
-      "description": "Diet to combat fatigue and increase energy levels",
-      "symptoms": ["fatigue", "low energy", "weakness", "tiredness"],
+      "description": "Diet to combat fatigue and maintain steady energy throughout the day",
+      "symptoms": ["fatigue", "low energy", "weakness", "tiredness", "exhaustion", "afternoon slump"],
       "foods_to_eat": [
-        "Complex carbohydrates (brown rice, quinoa)",
-        "Iron-rich foods (spinach, lentils)",
-        "Lean proteins",
+        "Complex carbohydrates (brown rice, quinoa, sweet potatoes)",
+        "Iron-rich foods (spinach, lentils, lean beef)",
+        "Lean proteins (chicken, fish, eggs)",
         "Nuts and seeds",
         "Bananas",
         "Eggs",
-        "Sweet potatoes",
-        "Green tea"
+        "Green tea (moderate)",
+        "Water (stay hydrated)"
       ],
       "foods_to_avoid": [
-        "Sugary snacks",
+        "Sugary snacks and drinks",
         "Energy drinks",
-        "Processed foods",
-        "Excess caffeine",
+        "Highly processed foods",
+        "Excessive caffeine",
         "Alcohol",
-        "White bread"
+        "White bread and refined carbs",
+        "Large heavy meals",
+        "Skipping meals"
       ],
       "meal_suggestions": {
-        "breakfast": "Scrambled eggs with whole wheat toast and spinach",
-        "lunch": "Quinoa bowl with grilled chicken and vegetables",
-        "dinner": "Lentil soup with brown rice",
-        "snacks": "Trail mix, fresh fruits"
+        "breakfast": "Scrambled eggs with whole wheat toast, spinach, and avocado",
+        "lunch": "Quinoa bowl with grilled chicken, vegetables, and tahini dressing",
+        "dinner": "Lentil soup with brown rice and steamed broccoli",
+        "snacks": "Trail mix, apple with almond butter, hard-boiled egg"
       },
       "effectiveness": 8,
-      "duration": "Ongoing"
+      "duration": "Ongoing lifestyle"
     },
     {
       "id": 4,
       "name": "Immune Boosting Diet",
-      "description": "Diet to strengthen immune system",
-      "symptoms": ["cold", "flu", "fever", "allergies", "infections"],
+      "description": "Diet to strengthen the immune system and fight infections",
+      "symptoms": ["cold", "flu", "fever", "allergies", "infections", "low immunity", "frequent illness"],
       "foods_to_eat": [
-        "Citrus fruits (oranges, lemons)",
-        "Garlic",
+        "Citrus fruits (oranges, lemons, grapefruits)",
+        "Garlic and onions",
         "Ginger",
         "Turmeric",
-        "Yogurt",
-        "Almonds",
-        "Green vegetables",
-        "Poultry (chicken soup)"
+        "Yogurt with probiotics",
+        "Almonds and sunflower seeds",
+        "Green vegetables (broccoli, spinach)",
+        "Chicken soup",
+        "Bell peppers",
+        "Mushrooms"
       ],
       "foods_to_avoid": [
-        "Sugar",
+        "Added sugars",
         "Processed foods",
         "Alcohol",
         "Fried foods",
-        "Excess dairy"
+        "Excessive dairy",
+        "Soda and sugary drinks",
+        "Fast food"
       ],
       "meal_suggestions": {
-        "breakfast": "Orange juice with oatmeal and almonds",
-        "lunch": "Chicken soup with vegetables",
-        "dinner": "Grilled fish with garlic and lemon, steamed broccoli",
-        "snacks": "Citrus fruits, yogurt"
+        "breakfast": "Fresh orange juice with oatmeal, almonds, and berries",
+        "lunch": "Homemade chicken soup with vegetables and garlic bread",
+        "dinner": "Grilled fish with lemon, garlic, steamed broccoli, and brown rice",
+        "snacks": "Citrus fruits, yogurt, handful of almonds"
       },
       "effectiveness": 8,
-      "duration": "During illness and preventive"
+      "duration": "During illness and preventive, ongoing"
     },
     {
       "id": 5,
       "name": "Heart Healthy Diet",
-      "description": "Diet for cardiovascular health and blood pressure",
-      "symptoms": ["high blood pressure", "heart health", "cholesterol"],
+      "description": "Diet for cardiovascular health, blood pressure, and cholesterol management",
+      "symptoms": ["high blood pressure", "cholesterol", "heart palpitations", "chest pain", "shortness of breath"],
       "foods_to_eat": [
         "Oats and whole grains",
-        "Fatty fish",
-        "Nuts (especially walnuts)",
-        "Olive oil",
+        "Fatty fish (salmon, mackerel)",
+        "Nuts (walnuts, almonds)",
+        "Extra virgin olive oil",
         "Berries",
         "Leafy greens",
-        "Legumes",
-        "Avocados"
+        "Legumes and beans",
+        "Avocados",
+        "Flaxseeds",
+        "Dark chocolate (in moderation)"
       ],
       "foods_to_avoid": [
-        "Salt (excess)",
-        "Red meat",
-        "Processed meats",
+        "Salt (limit to 1500mg daily)",
+        "Red meat and processed meats",
         "Fried foods",
         "Full-fat dairy",
-        "Sugary drinks"
+        "Sugary drinks and snacks",
+        "Trans fats and hydrogenated oils",
+        "Excessive alcohol",
+        "Processed and packaged foods"
       ],
       "meal_suggestions": {
-        "breakfast": "Oatmeal with berries and flaxseeds",
-        "lunch": "Mediterranean salad with olive oil",
-        "dinner": "Baked salmon with roasted vegetables",
-        "snacks": "Handful of walnuts, avocado toast"
+        "breakfast": "Oatmeal with berries, flaxseeds, and walnuts",
+        "lunch": "Mediterranean salad with olive oil, chickpeas, and feta",
+        "dinner": "Baked salmon with roasted vegetables and quinoa",
+        "snacks": "Handful of walnuts, avocado toast, fresh fruit"
       },
       "effectiveness": 9,
-      "duration": "Lifestyle change"
+      "duration": "Lifestyle change, minimum 8 weeks for measurable results"
     },
     {
       "id": 6,
       "name": "Stress Relief Diet",
-      "description": "Diet to reduce stress and anxiety",
-      "symptoms": ["stress", "anxiety", "insomnia", "nervousness"],
+      "description": "Diet to reduce stress, anxiety, and promote mental wellness",
+      "symptoms": ["stress", "anxiety", "insomnia", "nervousness", "depression", "irritability", "mood swings"],
       "foods_to_eat": [
-        "Dark chocolate (moderate)",
+        "Dark chocolate (70%+ cacao, moderate)",
         "Avocados",
         "Bananas",
-        "Chamomile tea",
-        "Fatty fish",
-        "Nuts",
+        "Chamomile and green tea",
+        "Fatty fish (omega-3 rich)",
+        "Nuts (especially walnuts)",
         "Whole grains",
-        "Leafy greens"
+        "Leafy greens",
+        "Blueberries",
+        "Turkey (tryptophan-rich)"
       ],
       "foods_to_avoid": [
-        "Caffeine (excess)",
+        "Caffeine (especially after noon)",
         "Alcohol",
-        "Sugar",
+        "Sugar and sweets",
         "Processed foods",
-        "Energy drinks"
+        "Energy drinks",
+        "High-sodium foods",
+        "Artificial sweeteners"
       ],
       "meal_suggestions": {
-        "breakfast": "Avocado toast with eggs",
-        "lunch": "Salmon salad with mixed greens",
-        "dinner": "Whole grain pasta with vegetables",
-        "snacks": "Dark chocolate square, chamomile tea"
+        "breakfast": "Avocado toast with eggs and a cup of green tea",
+        "lunch": "Salmon salad with mixed greens, walnuts, and olive oil",
+        "dinner": "Turkey with whole grain pasta and steamed vegetables",
+        "snacks": "Dark chocolate square, chamomile tea, banana with almond butter"
       },
       "effectiveness": 7,
-      "duration": "Ongoing"
+      "duration": "Ongoing, improvements in 2-3 weeks"
     },
     {
       "id": 7,
       "name": "Clear Skin Diet",
-      "description": "Diet to improve skin health and reduce acne",
-      "symptoms": ["acne", "skin problems", "oily skin"],
+      "description": "Diet to improve skin health, reduce acne, and promote clear complexion",
+      "symptoms": ["acne", "oily skin", "dry skin", "eczema", "skin inflammation", "dull skin"],
       "foods_to_eat": [
-        "Water (plenty)",
-        "Green vegetables",
-        "Fatty fish",
-        "Nuts",
+        "Water (8+ glasses daily)",
+        "Green vegetables (spinach, kale)",
+        "Fatty fish (salmon, sardines)",
+        "Nuts (almonds, walnuts)",
         "Berries",
         "Tomatoes",
         "Green tea",
-        "Carrots"
+        "Carrots and sweet potatoes (vitamin A)",
+        "Avocados",
+        "Citrus fruits"
       ],
       "foods_to_avoid": [
-        "Dairy products",
+        "Dairy products (especially milk)",
         "Sugar and sweets",
         "Fried foods",
         "Processed foods",
-        "White bread",
-        "Chocolate (excess)"
+        "White bread and refined carbs",
+        "Excessive chocolate",
+        "High-glycemic foods",
+        "Alcohol"
       ],
       "meal_suggestions": {
-        "breakfast": "Green smoothie with spinach and berries",
-        "lunch": "Grilled fish with salad",
-        "dinner": "Vegetable stir-fry with brown rice",
-        "snacks": "Carrot sticks, green tea"
+        "breakfast": "Green smoothie with spinach, berries, and almond milk",
+        "lunch": "Grilled fish with large mixed salad",
+        "dinner": "Vegetable stir-fry with brown rice and tofu",
+        "snacks": "Carrot sticks, green tea, handful of almonds"
       },
       "effectiveness": 7,
-      "duration": "4-6 weeks to see results"
+      "duration": "4-6 weeks to see visible results"
     },
     {
       "id": 8,
       "name": "Headache Prevention Diet",
       "description": "Diet to prevent and manage headaches and migraines",
-      "symptoms": ["headache", "migraine"],
+      "symptoms": ["headache", "migraine", "tension headache", "cluster headache"],
       "foods_to_eat": [
         "Water (stay hydrated)",
-        "Magnesium-rich foods (spinach, almonds)",
+        "Magnesium-rich foods (spinach, almonds, pumpkin seeds)",
         "Fatty fish",
         "Ginger",
         "Whole grains",
-        "Fresh fruits",
-        "Seeds"
+        "Fresh fruits (not citrus if trigger)",
+        "Seeds (chia, flax)",
+        "Leafy greens",
+        "Quinoa"
       ],
       "foods_to_avoid": [
         "Aged cheese",
-        "Processed meats",
+        "Processed meats (nitrates)",
         "Alcohol (especially red wine)",
-        "Caffeine (excess)",
+        "Excessive caffeine",
         "MSG",
-        "Artificial sweeteners",
-        "Chocolate (for some)"
+        "Artificial sweeteners (aspartame)",
+        "Chocolate (if personal trigger)",
+        "Citrus (if personal trigger)",
+        "Fermented foods (if personal trigger)"
       ],
       "meal_suggestions": {
-        "breakfast": "Whole grain cereal with fresh fruits",
-        "lunch": "Spinach salad with grilled fish",
+        "breakfast": "Whole grain cereal with fresh fruits and pumpkin seeds",
+        "lunch": "Spinach salad with grilled fish and olive oil",
         "dinner": "Brown rice with vegetables and lean protein",
-        "snacks": "Fresh fruits, almonds"
+        "snacks": "Fresh fruits, almonds, plenty of water"
       },
       "effectiveness": 7,
-      "duration": "Ongoing prevention"
+      "duration": "Ongoing prevention, keep food diary to identify triggers"
     },
     {
       "id": 9,
       "name": "Weight Management Diet",
-      "description": "Balanced diet for healthy weight management",
-      "symptoms": ["weight gain", "obesity", "metabolism"],
+      "description": "Balanced diet for healthy and sustainable weight management",
+      "symptoms": ["weight gain", "obesity", "slow metabolism", "overeating"],
       "foods_to_eat": [
-        "Vegetables (all types)",
-        "Lean proteins (chicken, fish, tofu)",
-        "Whole grains",
-        "Legumes",
-        "Fruits (moderate)",
+        "Vegetables (all types, especially leafy greens)",
+        "Lean proteins (chicken, fish, tofu, legumes)",
+        "Whole grains (quinoa, brown rice, oats)",
+        "Fruits (moderate portions)",
         "Nuts (small portions)",
-        "Green tea"
+        "Green tea",
+        "Water before meals",
+        "High-fiber foods"
       ],
       "foods_to_avoid": [
-        "Sugary drinks",
+        "Sugary drinks and sodas",
         "Fast food",
         "Processed snacks",
-        "White bread",
-        "Excess oil",
-        "Late night eating"
+        "White bread and refined carbs",
+        "Excessive oil and butter",
+        "Late night eating",
+        "Large portions",
+        "Alcohol"
       ],
       "meal_suggestions": {
-        "breakfast": "Egg white omelet with vegetables",
-        "lunch": "Grilled chicken breast with salad",
-        "dinner": "Steamed fish with vegetables",
-        "snacks": "Apple slices, small handful of nuts"
+        "breakfast": "Egg white omelet with vegetables and whole wheat toast",
+        "lunch": "Grilled chicken breast with large salad and vinaigrette",
+        "dinner": "Steamed fish with vegetables and small portion of brown rice",
+        "snacks": "Apple slices, celery with hummus, small handful of nuts"
       },
       "effectiveness": 8,
-      "duration": "Lifestyle change"
+      "duration": "Lifestyle change, steady progress over months"
     },
     {
       "id": 10,
       "name": "Hydration Focus Diet",
-      "description": "Diet emphasizing proper hydration",
-      "symptoms": ["dehydration", "dry skin", "fatigue", "headache"],
+      "description": "Diet emphasizing proper hydration for overall health",
+      "symptoms": ["dehydration", "dry skin", "fatigue", "headache", "constipation", "dark urine"],
       "foods_to_eat": [
-        "Water (8+ glasses)",
+        "Water (8+ glasses, minimum 2 liters)",
         "Cucumber",
         "Watermelon",
-        "Oranges",
+        "Oranges and citrus",
         "Coconut water",
         "Soups and broths",
-        "Lettuce",
-        "Celery"
+        "Lettuce and celery",
+        "Strawberries",
+        "Cantaloupe",
+        "Herbal teas"
       ],
       "foods_to_avoid": [
         "Excess salt",
         "Alcohol",
-        "Caffeine (excess)",
-        "Sugary drinks"
+        "Excessive caffeine",
+        "Sugary drinks",
+        "Highly processed foods",
+        "Salty snacks"
       ],
       "meal_suggestions": {
-        "breakfast": "Fresh fruit smoothie",
+        "breakfast": "Fresh fruit smoothie with cucumber and coconut water",
         "lunch": "Vegetable soup with cucumber salad",
         "dinner": "Light meal with watermelon dessert",
-        "snacks": "Cucumber slices, coconut water"
+        "snacks": "Cucumber slices, coconut water, orange slices"
       },
       "effectiveness": 8,
-      "duration": "Ongoing"
+      "duration": "Ongoing daily habit"
+    },
+    {
+      "id": 11,
+      "name": "Sleep-Promoting Diet",
+      "description": "Diet to improve sleep quality and combat insomnia",
+      "symptoms": ["insomnia", "restlessness", "poor sleep quality", "fatigue", "anxiety"],
+      "foods_to_eat": [
+        "Tart cherries (natural melatonin)",
+        "Almonds and walnuts",
+        "Turkey",
+        "Chamomile tea",
+        "Kiwi",
+        "Fatty fish",
+        "Warm milk",
+        "Bananas",
+        "Oatmeal",
+        "Honey (small amount)"
+      ],
+      "foods_to_avoid": [
+        "Caffeine (especially after 2 PM)",
+        "Alcohol (disrupts sleep cycles)",
+        "Spicy foods at dinner",
+        "High-fat heavy meals at night",
+        "Sugar and sweets before bed",
+        "Large meals close to bedtime",
+        "Chocolate (contains caffeine)"
+      ],
+      "meal_suggestions": {
+        "breakfast": "Oatmeal with banana and almonds",
+        "lunch": "Turkey sandwich on whole grain with salad",
+        "dinner": "Grilled salmon with vegetables (finish 3 hours before bed)",
+        "evening_snack": "Small bowl of tart cherries or kiwi, chamomile tea"
+      },
+      "effectiveness": 7,
+      "duration": "2-3 weeks to establish better sleep patterns"
+    },
+    {
+      "id": 12,
+      "name": "BRAT Diet for Upset Stomach",
+      "description": "Bland diet for recovering from stomach illness",
+      "symptoms": ["diarrhea", "nausea", "vomiting", "stomach ache", "food poisoning"],
+      "foods_to_eat": [
+        "Bananas",
+        "Rice (white, plain)",
+        "Applesauce (unsweetened)",
+        "Toast (plain, white bread)",
+        "Crackers (saltines)",
+        "Clear broths",
+        "Weak tea",
+        "Boiled potatoes"
+      ],
+      "foods_to_avoid": [
+        "Dairy products",
+        "Fatty or fried foods",
+        "Spicy foods",
+        "Raw vegetables",
+        "Citrus",
+        "Alcohol",
+        "Caffeine",
+        "High-fiber foods"
+      ],
+      "meal_suggestions": {
+        "breakfast": "Plain toast with weak tea",
+        "lunch": "Plain rice with clear chicken broth",
+        "dinner": "Mashed banana and applesauce",
+        "snacks": "Saltine crackers, small sips of water"
+      },
+      "effectiveness": 8,
+      "duration": "24-48 hours, then gradually reintroduce normal foods"
+    },
+    {
+      "id": 13,
+      "name": "Anti-Anxiety Diet",
+      "description": "Diet rich in nutrients that support mental health and reduce anxiety",
+      "symptoms": ["anxiety", "panic", "nervousness", "restlessness", "stress", "depression"],
+      "foods_to_eat": [
+        "Fatty fish (omega-3s)",
+        "Eggs (choline)",
+        "Pumpkin seeds (zinc)",
+        "Dark chocolate",
+        "Turmeric",
+        "Chamomile",
+        "Yogurt (probiotics)",
+        "Green tea (L-theanine)",
+        "Almonds (vitamin E)",
+        "Blueberries"
+      ],
+      "foods_to_avoid": [
+        "Caffeine",
+        "Alcohol",
+        "Added sugars",
+        "Processed foods",
+        "Artificial sweeteners",
+        "Fried foods",
+        "Refined carbohydrates"
+      ],
+      "meal_suggestions": {
+        "breakfast": "Eggs with avocado and green tea",
+        "lunch": "Salmon salad with pumpkin seeds and olive oil",
+        "dinner": "Turmeric-spiced chicken with vegetables and brown rice",
+        "snacks": "Dark chocolate, blueberries, almonds, chamomile tea"
+      },
+      "effectiveness": 7,
+      "duration": "Ongoing, noticeable improvements in 3-4 weeks"
+    },
+    {
+      "id": 14,
+      "name": "Joint Health Diet",
+      "description": "Diet to support joint health and reduce arthritis symptoms",
+      "symptoms": ["joint pain", "arthritis", "stiffness", "inflammation", "reduced mobility"],
+      "foods_to_eat": [
+        "Fatty fish (salmon, sardines)",
+        "Olive oil",
+        "Cherries and berries",
+        "Broccoli and leafy greens",
+        "Walnuts",
+        "Garlic",
+        "Turmeric and ginger",
+        "Green tea",
+        "Bone broth",
+        "Citrus fruits"
+      ],
+      "foods_to_avoid": [
+        "Processed foods",
+        "Red meat (limit)",
+        "Sugar and sweets",
+        "Fried foods",
+        "Refined carbohydrates",
+        "Alcohol",
+        "Salt (excess)",
+        "Trans fats"
+      ],
+      "meal_suggestions": {
+        "breakfast": "Oatmeal with cherries, walnuts, and turmeric-spiced milk",
+        "lunch": "Grilled salmon with broccoli and olive oil",
+        "dinner": "Chicken with garlic, ginger stir-fry vegetables, brown rice",
+        "snacks": "Berries, green tea, handful of walnuts"
+      },
+      "effectiveness": 8,
+      "duration": "Ongoing lifestyle, improvement in 4-6 weeks"
+    },
+    {
+      "id": 15,
+      "name": "Blood Sugar Balancing Diet",
+      "description": "Diet to maintain stable blood sugar levels",
+      "symptoms": ["diabetes symptoms", "energy crashes", "sugar cravings", "weight gain", "fatigue"],
+      "foods_to_eat": [
+        "Non-starchy vegetables",
+        "Lean proteins",
+        "Whole grains (limited portions)",
+        "Legumes",
+        "Nuts and seeds",
+        "Cinnamon",
+        "Apple cider vinegar",
+        "Berries (in moderation)",
+        "Fatty fish",
+        "Eggs"
+      ],
+      "foods_to_avoid": [
+        "Sugary drinks and sodas",
+        "White bread and refined grains",
+        "Candy and sweets",
+        "Fruit juices",
+        "Processed snacks",
+        "White rice and pasta (or limit)",
+        "Alcohol",
+        "High-sugar fruits (limit)"
+      ],
+      "meal_suggestions": {
+        "breakfast": "Eggs with vegetables and one slice whole grain toast",
+        "lunch": "Grilled chicken with large salad and chickpeas",
+        "dinner": "Fish with roasted non-starchy vegetables",
+        "snacks": "Small handful of nuts, celery with almond butter"
+      },
+      "effectiveness": 8,
+      "duration": "Lifestyle change, blood sugar improvements in 2-4 weeks"
     }
   ]
 }

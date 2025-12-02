@@ -16,12 +16,20 @@
                 <span>HealthCare</span>
             </a>
             <button class="menu-toggle">☰</button>
-            <nav class="nav">
+            <nav class="nav" id="main-nav">
                 <a href="/" class="nav-link">Home</a>
                 <a href="/remedies" class="nav-link">Remedies</a>
                 <a href="/diet-plans" class="nav-link">Diet Plans</a>
                 <a href="/vitals" class="nav-link active">Vitals</a>
                 <a href="/history" class="nav-link">History</a>
+                <span id="auth-links">
+                    <a href="/login" class="nav-link">Login</a>
+                    <a href="/register" class="nav-link btn btn-primary" style="padding: 0.5rem 1rem; margin-left: 0.5rem;">Sign Up</a>
+                </span>
+                <span id="user-links" style="display: none;">
+                    <a href="/reminders" class="nav-link">Reminders</a>
+                    <a href="#" id="logout-btn" class="nav-link">Logout</a>
+                </span>
             </nav>
         </div>
     </header>
@@ -72,6 +80,28 @@
                         <button id="measure-btn" class="btn btn-primary btn-lg">
                             ❤️ Start Measurement
                         </button>
+
+                        <!-- Manual Input Section -->
+                        <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border-color);">
+                            <h4 style="margin-bottom: 1rem; color: var(--text-light);">Or enter manually:</h4>
+                            <div style="display: flex; gap: 0.5rem; justify-content: center; align-items: center;">
+                                <input
+                                    type="number"
+                                    id="manual-bpm"
+                                    placeholder="BPM"
+                                    min="30"
+                                    max="250"
+                                    class="form-input"
+                                    style="width: 100px; text-align: center;"
+                                >
+                                <button id="manual-save-btn" class="btn btn-secondary">
+                                    Save
+                                </button>
+                            </div>
+                            <p style="font-size: 0.75rem; color: var(--text-light); margin-top: 0.5rem;">
+                                No camera? Enter your heart rate from a fitness device or manual count.
+                            </p>
+                        </div>
 
                         <!-- Reference Info -->
                         <div style="margin-top: 1.5rem; padding: 1rem; background: var(--bg-color); border-radius: var(--radius);">
